@@ -66,6 +66,11 @@
 
 <section id="bundle-consultation" style="margin-top: 2rem; padding: 1.5rem; background-color: #fff3e0; border: 1px solid #e0a800; border-radius: 10px;">
   <h2>📦 Trucking Profit Analysis + 30 Min Virtual Call – $200</h2>
+<p style="margin-top: 10px;"><strong>After payment, schedule your session here:</strong><br>
+<a href="https://calendly.com/bryantinvestmentsllc24/truck-route-profit-analysis-30-min-call" target="_blank" style="color: #d35400; text-decoration: underline;">
+https://calendly.com/bryantinvestmentsllc24/truck-route-profit-analysis-30-min-call
+</a></p>
+
   <p>Get everything from the full Trucking Route Profit Analysis <strong>plus</strong> a personalized 30-minute video consultation (via Zoom / Google Meet / MS Teams).</p>
   <ul>
     <li>📄 Custom PDF Report: Profit, Expenses, Fuel Analysis</li>
@@ -74,6 +79,24 @@
   </ul>
   <a href="https://www.paypal.com/ncp/payment/VGYZL4GWTMNXC" style="display: inline-block; margin-top: 1rem; background-color: #d35400; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Buy Now – $200</a>
 </section>
+
+
+<script>
+  function showReminder(service) {
+    alert("✅ Payment received for " + service + ".\n📅 Don't forget to schedule your session using the Calendly link shown below the button.");
+  }
+
+  // Attach popup to buy now buttons
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll("a[href*='paypal.com/ncp/payment']");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const label = btn.closest("section").querySelector("h2").innerText;
+        showReminder(label);
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
